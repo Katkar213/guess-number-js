@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess My Number</title>
+    <style>
+        *{
+            font-family: 'Nunito Sans', sans-serif;
+        }
+        body{
+             height: 100vh;
+            width: 100vw;
+            background-color:skyblue;
+            background-repeat: no-repeat;
+            background-size:cover;
+            overflow-x: hidden;
+            position: relative;
+            padding: 0%;
+            margin: 0%;
+          
+        }
+        .box{
+            height:100px;
+            width:100px;
+            border: 2px solid black;
+            font-size: 90px;
+            text-align: center;
+            background-color: white;
+            position: absolute;
+            left:40%;
+            top:20%;
+            z-index: 2;
+        }
+        #input{
+            height:90px;
+            width:130px;
+            border: 2px solid black;
+            font-size: 30px;
+            text-align: center;
+            position: relative;
+            top: 63%;
+            left:5%;
+        }
+        .notice{
+              position: absolute;
+            right: 30px;
+            top: 0px;
+
+        }
+        .randomNumber{
+            position: absolute;
+            top:65%;
+            right:17%;
+        }
+        #count{
+            position: absolute;
+            top:75%;
+            right:20%;
+        }
+        #highscore{
+            position: absolute;
+            top:84%;
+            right:21%;
+        }
+        .checkit{
+            position: relative;
+            top:90%;
+            left:-60px;
+         
+       
+        }
+        .reset{
+            position: relative;
+            top:-18px;
+            left:18px;
+            
+        }
+        .null{
+           position: absolute;
+            width:100vw;
+            height:40px;
+            /* border: 2px solid black; */
+            margin-top: 8px;
+            background-color: antiquewhite;
+        }
+
+
+    </style>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Nunito+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <button onclick="reload()" class="reset">Play Again</button>
+    <div class="box">?</div>
+    <div class="null"></div>
+    <input type="number" id="input" placeholder="Enter ">
+    <div class="notice"><h3>(Between 1 and 100)</h3></div>
+    <h3 class="randomNumber">Start guessing....</h3>
+    <h3 id="count">💯 Chances: 100</h3>
+    <h3 id="highscore">🤌 High Score: 0</h3>
+    <button onclick="check()" class="checkit">Check!!</button>
+
+    <script src="./script.js"></script>
+</body>
+</html>
